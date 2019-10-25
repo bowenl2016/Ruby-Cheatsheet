@@ -1,0 +1,80 @@
+\section{Ruby Basics}
+\subsection*{Comments and Statements}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Ruby omits ;, and often () on function \\
+\rowcolor{Gray}
+calls \\
+Function names may end in ? and ! \\
+\rowcolor{Gray}
+Single-line comments start with \# \\
+Multi-line comments bracketed by \\
+=begin and =end at beginning of line \\
+\rowcolor{Gray}
+Results indicated by => \\
+\end{tabular}
+\\
+
+\subsection*{Operators}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Arithmetic:\hspace{2mm}$+$\hspace{3mm}$-$\hspace{3mm}$*$\hspace{3mm}$/$\hspace{3mm}$\%$\hspace{3mm}$**$ \\
+\rowcolor{Gray}
+$/$ is either $\div$ or div, depending on \\
+\rowcolor{Gray}
+operands \\
+Integer/(div) rounds towards $-\infty$ \\
+$\div$ is modulus, not remainder \\
+Bitwise:\hspace{2mm}$\sim$\hspace{3mm}$|$\hspace{3mm}$\&$\hspace{3mm}\^<{}<\hspace{3mm}$>{}>$ \\
+\rowcolor{Gray}
+Comparison:\hspace{2mm}$<$\hspace{3mm}$>$\hspace{3mm}$<=$\hspace{3mm}$>=$\hspace{3mm}$<=>$\\
+\rowcolor{Gray}
+<=> returns -1/0/1 iff LHS is sma- \\
+\rowcolor{Gray}
+ller/equal/larger than RHS \\
+Logical:\hspace{2mm}$\&\&$\hspace{3mm}$| |$\hspace{3mm}$!$\hspace{3mm}$and$\hspace{3mm}$or$\hspace{3mm}$not$ \\
+Words have low precedence (below =)\\
+\end{tabular}
+\\
+
+\subsection*{Backslashes}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+$\setminus$t (tab), $\setminus$n (newline), $\setminus$r (carriage \\
+\rowcolor{Gray}
+return) \\
+$\setminus$f (form feed), $\setminus$b (backspace), $\setminus$a (bel- \\
+l)\\
+\rowcolor{Gray}
+$\setminus$e (escape), $\setminus$s (whitespace), $\setminus$nnn \\
+\rowcolor{Gray}
+(octal) \\
+$\setminus$xnn (hexadecimal), $\setminus$cx (control x) \\
+\end{tabular}
+\\
+
+\subsection*{Pseudo Variables}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+self, is receiver of the current method\phantom{s}\\
+nil, nothingness \\
+\rowcolor{Gray}
+true, false \\
+\rowcolor{Gray}
+nil evaluates to false, but 0 is to true \\
+$\textunderscore\textunderscore$FILE$\textunderscore\textunderscore$ is current source file name\\
+\rowcolor{Gray}
+$\textunderscore\textunderscore$LINE$\textunderscore\textunderscore$ is current line number \\
+\end{tabular}
+\\
+
+\subsection*{Naming Scope}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Local: start with lowercase letter or \textunderscore \phantom{s}\\
+Global: start with \$ \\
+\rowcolor{Gray}
+Instance: start with @ \\
+Class: start with @@  \\
+\end{tabular}
+\\

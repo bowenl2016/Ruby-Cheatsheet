@@ -1,0 +1,95 @@
+\section{Classes and Methods}
+\subsection*{Numbers (Integer, Float, Rational, Complex)}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+83, $0$123, $0x$53, $ob$101001, 0b101\textunderscore 001\\
+123.4, 1.234$e2$, 1.234$e-2$ \\
+\rowcolor{Gray}
+2/3$r$, 4+3$i$ \\
+\end{tabular}
+\\
+
+\subsection*{Strings}
+Delimiters " " and ' '\phantom{spa} \\
+Interpolation of $\#\{...\}$ occurs inside " " \\
+Convention on method names\\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+? suffix: polar result (e.g., boolean)\\
+! suffix: dangerous (e.g., changes rece-\\
+iver)\\
+\end{tabular}
+Examples\\
+s = "hello world" \\
+s.$start$\textunderscore $with?$ \#=> false\\
+s.$length$ \#=? 11\\
+"3.14".$to$\textunderscore$f$ \#=> 3.14\\
+s.$upcase$ \#=> "HELLO WORLD", s unchanged\\
+s.$captitalized!$ \#=> s is now "Hello world"\\
+s.$split$ \#=> ["Hello", "world"]\\
+s.$split$ "o" \#=> ["Hell", "w", "rld"]\\
+s.$replace$ "good bye" \#=> s is "good bye"\\
+s.$slice$ 3, 4 \#=> "d by" (start, length)\\
+s$[$-2, 1$]$ \#=> "y" [start, length]\\
+s.$chomp!$ \#=> remove trailing $\setminus$n if there\\
+
+\subsection*{Arrays}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+b = [6, 2, 3.14, "pi", []]\\
+t = \%w\{hi world\} \#=> ["hi", "world"]\\
+\end{tabular}
+Methods for element access, modification \\
+b.$length$ \#=> 5 \\
+b$[$0$]$ \#=> 6 (b.$first$, b.$last$)\\
+b$[$-2$]$ \#=> "pi"\\
+b$[$10$]$ = 4 \# assignment past end of array\\
+b.$length$ \#=> 11, size has changed!\\
+b$[$2, 5$]$ \#=> [3.14, "pi", [], nil, nil]\\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Add/remove from end: push/pop\\
+Add/remove from beginning: unshi-\\
+ft/shift\\
+\rowcolor{Gray}
+All modify the receiver (but no !)\\
+Concatenation: +/concat\\
+\rowcolor{Gray}
+Difference: -\\
+Concat modifies receiver, +/- do not\\
+\end{tabular}
+\\
+
+\subsection*{Ranges}
+\begin{tabular}{ l }
+\rowcolor{Gray}
+0$..$4 includes start and end value \\
+"cab"$..$"cat" does NOT include end va-\\
+lue \\
+\rowcolor{Gray}
+Method to\textunderscore a converts a range to an\\
+\rowcolor{Gray}
+array \\
+(0..5).to \textunderscore a \#=> [0, 1, 2, 3, 4, 5] \\
+\rowcolor{Gray}
+(0..5).to \textunderscore a \#=> [] \\
+Methods begin/end, first/last \\
+\end{tabular}
+\\
+
+\subsection*{Range Inclusion}
+case target \\
+when 0...mid \\
+\phantom{1}\hspace{4mm}puts "first half" \\
+when mid...size \\
+\phantom{1}\hspace{4mm}puts "second half" \\
+end\\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Operator === (aka case equality)\\
+include? iterates through range, loo-\\
+king for object value equality\\
+\rowcolor{Gray}
+cover? compares to end points \\
+\end{tabular}
+\\

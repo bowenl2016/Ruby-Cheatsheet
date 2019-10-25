@@ -1,0 +1,54 @@
+\section{Dynamic Types}
+In Ruby, every variable maps to an object \\
+Reference value is called the $object ID$ \\
+\\
+msg = "HelloWorld" \\
+msg.object\textunderscore id \# => 472004497544380 \\
+\\
+For small integer, the mathematical value is encoded in the reference value! \\
+
+\subsection*{ObjectMethods}
+\begin{tabular}{ l }
+list = [1, 2, 3, 4] \\
+list.$size$ \#=> 4 \\
+\rowcolor{Gray}
+3.$to$\textunderscore $s$ \#=> "3" \\
+3.$odd?$ \#=> true \\
+\rowcolor{Gray}
+3.$lcm$ 5 \#=> 15 \\
+3. $+$ 5 \#=> 8 \\
+\rowcolor{Gray}
+3.$class$ \#=> Integer \\
+3. $methods$ \#=> [:.size, :inspect, ...]\phantom{spa}\\
+\end{tabular}
+\\
+
+\subsection*{EqualityOperator}
+x == y checks object value equality\\
+x.equal? y checks reference value equality\\
+
+\subsection*{Assignment and Aliasing}
+\begin{tabular}{ l }
+Assignment copies the reference value \\
+\rowcolor{Gray}
+Result: Both variables point to the sa- \\
+\rowcolor{Gray}
+em object \\
+Aliasing change mutable objects' val-\\
+ue as well! \\
+\rowcolor{Gray}
+Pitfall: Strings in Ruby are mutable \\
+Arithmetic contraction: \\
+$+=$\hspace{4mm}$-=$\hspace{4mm}$*=$\hspace{4mm}$/=$\hspace{4mm}$>\%=$\hspace{4mm}$**=$ \\
+\rowcolor{Gray}
+Pitfall: no ++ or -- operators \\
+Logical contraction: \\
+$| |=$\hspace{4mm}$\&\&=$ \\
+\rowcolor{Gray}
+Idiom: ||= for initializing potentially \\
+nil variables \\
+x ||= y not equivalent to x = x || y \\
+\rowcolor{Gray}
+Bettre to think of it as x || x = y \\
+\end{tabular}
+\\

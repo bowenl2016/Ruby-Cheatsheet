@@ -1,0 +1,77 @@
+\section{Control Expressions}
+\subsection*{If Statement}
+if\hspace{2mm}boo-expr\hspace{2mm}[then] \\
+\phantom{1}\hspace{4mm}... \\
+elsif\hspace{2mm}boo-expr\hspace{2mm}[then] \\
+\phantom{1}\hspace{4mm}... \\
+else \\
+\phantom{1}\hspace{4mm}... \\
+end \\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Statement Modifier \\
+x = x + 1 if x < LIMIT \\
+\rowcolor{Gray}
+Unless: equivalent to "if not" \\
+$unless$ size >= 100\\
+ \phantom{1}\hspace{4mm}puts "{}small" \\
+end \\
+\rowcolor{Gray}
+x = x + 1 unless x >= LIMIT\phantom{spacesp.}\\
+\end{tabular}
+\\
+
+\subsection*{Case Statement}
+[ variable =  ] $case$ expression \\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+when $nil$ \\
+\rowcolor{Gray}
+\phantom{1}\hspace{4mm}executes if expr is nil \\
+when $value$ \# e.g. 0, 'start' \\
+\phantom{1}\hspace{4mm}executes if expr equals value \\
+\rowcolor{Gray}
+when $type$ \# e.g. String \\
+\rowcolor{Gray}
+\phantom{1}\hspace{4mm}executes if expr resulted in Type \\
+when $/regexp/$ \# e.g. /[aeiou]/ \\
+\phantom{1}\hspace{4mm}executes is expr matches regexp \\
+\rowcolor{Gray}
+when $min..max$ \\
+\rowcolor{Gray}
+\phantom{1}\hspace{4mm}executes if expr is in range \\
+else \\
+\phantom{1}\hspace{4mm}... \\
+\rowcolor{Gray}
+end \\
+\end{tabular}
+\\
+
+\subsection*{While Statement}
+while\hspace{2mm}boo-expr\hspace{2mm}[do] \\
+\phantom{1}\hspace{4mm}... \\
+end \\
+\begin{tabular}{ l }
+\rowcolor{Gray}
+Until: equivalent to "while not"\phantom{space}\\
+until i > count \\
+\phantom{1}\hspace{4mm}... \\
+end \\
+\end{tabular}
+\\
+
+\subsection*{Functions}
+\begin{tabular}{ l }
+keyword $def$ \\
+\rowcolor{Gray}
+No types in signature (i.e. parameter, \\
+\rowcolor{Gray}
+return value) \\
+All functions return something \\
+\rowcolor{Gray}
+Value of last statement implicitly \\
+\rowcolor{Gray}
+returned \\
+Dot notation for method call \\
+\end{tabular}
+\\

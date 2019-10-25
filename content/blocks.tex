@@ -1,0 +1,38 @@
+\section{Advanced Ruby}
+\subsection*{Blocks}
+A block is a statement(s) passed in as an argument to a function\\
+5.times $do$\\
+\phantom{1}\hspace{4mm}puts "hello world"\\
+$end$\\
+5.times $\{$ puts "hello world" $\}$\\
+\\
+A block can itself have parameters\\
+5.times $\{$ |n| puts n**2 $\}$\\
+Within a function, the passed-in block is called with keyword "yield"\\
+\\
+Iteration on Arrays Using Blocks
+\begin{tabular}{ l }
+\rowcolor{Gray}
+a.each \{ |str| puts str.upcase \}\\
+a.each\textunderscore index \{ |i| print "\#\{i\}--" \}\phantom{spacespa}\\
+\rowcolor{Gray}
+a.fill \{ | i | i * i \}\\
+a.index \{ |x| x > limit \}\\
+\rowcolor{Gray}
+a.select! \{ |v| v =~ /[aeiou]/\}\\
+a.reject! \{ |v| v =~ /[aeiou]/\}\\
+\rowcolor{Gray}
+a.sort! \{ |x, y| x.length <=> y.length \}\\
+\end{tabular}
+\\
+Map transforms an array into a new array, element by element \\
+a.$map$ \{ |item| block \}\\
+\\
+Reduce transforms an array into a single value, one element at a time\\
+a.$reduce$(init) \{ |acc, item| block \}\\
+\subsection*{Hashes}
+Indexed with array syntax []\\
+h['hello'] = 5\\
+\subsection*{Symbols}
+Unique and immutable strings\\
+Prefix with ":"\\
